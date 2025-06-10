@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafli's Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: orange;
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        .hero {
+            padding: 100px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .hero h1:hover {
+            color: orange;
+            transition: 0.3s;
+        }
+
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease;
+        }
+
+        footer {
+            background-color: orange;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Rafli's Profile</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="display-4">Halo, Saya Rafli</h1>
+            <p class="lead">Calon Teknokrat Web3 </p>
+            <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#aboutModal">Lihat
+                Profil</button>
+        </div>
+    </section>
+
+    <section id="gallery" class="container my-5">
+        <h2 class="text-center mb-4">Galeri Saya</h2>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1748968218568-a5eac621e65c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2OXx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="data:image/webp;base64,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" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1749276873098-7e44bd10575c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
+
+    <section id="contact" class="container my-5">
+        <h2 class="text-center mb-4">Hubungi Saya</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nama</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Pesan</label>
+                        <textarea class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Rafli Mulyarahman. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tentang Rafli</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Halo! Saya Rafli, mahasiswa yang sedang berjuang menjadi teknokrat Web3. Saya semangat belajar
+                        JavaScript, Solidity, dan teknologi blockchain. Mari bertumbuh bersama!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
