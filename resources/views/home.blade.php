@@ -64,17 +64,19 @@
         <div class="container">
             <h2 class="text-center section-title animate-on-scroll">Produk Unggulan</h2>
             <div class="row g-4">
+
                 <!-- Product 1 -->
+                 @foreach($products as $product)
                 <div class="col-lg-3 col-md-6 animate-on-scroll">
                     <div class="card product-card h-100">
                         <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=250&fit=crop" 
+                            <img src="{{$product->image}}" 
                                  class="card-img-top product-image" alt="Headphone Premium">
                             <span class="discount-badge">-20%</span>
                         </div>
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Headphone Wireless Premium</h5>
-                            <p class="card-text text-muted">Headphone berkualitas tinggi dengan noise cancelling</p>
+                            <h5 class="card-title">{{$product->name}}</h5>
+                            <p class="card-text text-muted">{{$product->description}}</p>
                             <div class="rating mb-2">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -85,8 +87,8 @@
                             </div>
                             <div class="mt-auto">
                                 <div class="mb-2">
-                                    <span class="price">Rp 899.000</span>
-                                    <span class="original-price ms-2">Rp 1.125.000</span>
+                                    <span class="price">{{ 'Rp ' . number_format($product->price, 0, ',', '.') }}</span>
+                                    <span class="original-price ms-2">{{ 'Rp ' . number_format($product->price * 1.15, 0, ',', '.') }}</span>
                                 </div>
                                 <button class="btn btn-primary w-100">
                                     <i class="fas fa-cart-plus me-2"></i>Tambah ke Keranjang
@@ -95,101 +97,8 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Product 2 -->
-                <div class="col-lg-3 col-md-6 animate-on-scroll">
-                    <div class="card product-card h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=300&h=250&fit=crop" 
-                                 class="card-img-top product-image" alt="Tas Ransel">
-                            <span class="discount-badge">-15%</span>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Tas Ransel Anti Air</h5>
-                            <p class="card-text text-muted">Tas ransel multifungsi untuk aktivitas sehari-hari</p>
-                            <div class="rating mb-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span class="ms-1">(89 ulasan)</span>
-                            </div>
-                            <div class="mt-auto">
-                                <div class="mb-2">
-                                    <span class="price">Rp 425.000</span>
-                                    <span class="original-price ms-2">Rp 500.000</span>
-                                </div>
-                                <button class="btn btn-primary w-100">
-                                    <i class="fas fa-cart-plus me-2"></i>Tambah ke Keranjang
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="col-lg-3 col-md-6 animate-on-scroll">
-                    <div class="card product-card h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=300&h=250&fit=crop" 
-                                 class="card-img-top product-image" alt="Sepatu Olahraga">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Sepatu Olahraga Running</h5>
-                            <p class="card-text text-muted">Sepatu olahraga ringan dan nyaman untuk berlari</p>
-                            <div class="rating mb-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span class="ms-1">(201 ulasan)</span>
-                            </div>
-                            <div class="mt-auto">
-                                <div class="mb-2">
-                                    <span class="price">Rp 750.000</span>
-                                </div>
-                                <button class="btn btn-primary w-100">
-                                    <i class="fas fa-cart-plus me-2"></i>Tambah ke Keranjang
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="col-lg-3 col-md-6 animate-on-scroll">
-                    <div class="card product-card h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=250&fit=crop" 
-                                 class="card-img-top product-image" alt="Smartwatch">
-                            <span class="discount-badge">-25%</span>
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Smartwatch Fitness</h5>
-                            <p class="card-text text-muted">Smartwatch dengan fitur fitness tracking lengkap</p>
-                            <div class="rating mb-2">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span class="ms-1">(156 ulasan)</span>
-                            </div>
-                            <div class="mt-auto">
-                                <div class="mb-2">
-                                    <span class="price">Rp 1.125.000</span>
-                                    <span class="original-price ms-2">Rp 1.500.000</span>
-                                </div>
-                                <button class="btn btn-primary w-100">
-                                    <i class="fas fa-cart-plus me-2"></i>Tambah ke Keranjang
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                @endforeach
+                
 
             <div class="text-center mt-5">
                 <button class="btn btn-primary btn-lg">
@@ -234,7 +143,10 @@
             </div>
         </div>
     </section>
+    <div class="row my-0 mx-5 pb-5 px-5">
+        <div class="col-12">
+    {{ $products->links() }}
+    </div>
+    </div>
 @endsection
-    
-  
-    
+

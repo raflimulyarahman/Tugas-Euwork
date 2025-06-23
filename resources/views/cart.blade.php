@@ -346,7 +346,7 @@
             <span id="success-text">Produk berhasil diperbarui!</span>
         </div>
 
-        <div class="row">
+        <div class="row align-items-start">
             <!-- Cart Items -->
             <div class="col-lg-8">
                 <div id="cart-items">
@@ -504,7 +504,8 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
+                
                 <!-- Cart Summary -->
                 <div class="col-lg-4">
                     <div class="cart-summary">
@@ -547,7 +548,7 @@
                                 <strong class="price" id="total-amount">Rp 2.894.000</strong>
                             </div>
                         </div>
-
+                        
                         <div class="mb-3">
                             <label class="form-label"><i class="fas fa-truck me-2"></i>Pilih Pengiriman</label>
                             <select class="form-select" onchange="updateShipping()">
@@ -589,7 +590,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
 
         <!-- Empty Cart (Hidden by default) -->
@@ -601,9 +601,10 @@
                 <i class="fas fa-shopping-bag me-2"></i>Mulai Belanja
             </a>
         </div>
-
+    </div>
         <!-- Footer -->
-        <x-footer></x-footer>
+        <x-footer>   
+        </x-footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
         <script>
@@ -841,7 +842,7 @@
                     }
                 });
             });
-        </script>
+    </script>
 </body>
 
 </html>
