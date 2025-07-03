@@ -145,7 +145,7 @@
             transform: translateY(30px);
             transition: all 0.6s ease;
         }
-        
+         
         .animate-on-scroll.animate {
             opacity: 1;
             transform: translateY(0);
