@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
-        <a class="navbar-brand text-primary" href="#home">
-            <i class="fas fa-shopping-bag me-2"></i>ShopMart
+        <a class="navbar-brand fw-bold" href="#home" style="color: #4f46e5 !important; font-size: 1.5rem;">
+            <i class="fas fa-shopping-bag me-2" style="color: #4f46e5;"></i>ShopMart
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
