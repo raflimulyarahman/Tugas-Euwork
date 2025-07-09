@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
     <div class="container">
         <a class="navbar-brand fw-bold" href="#home" style="color: #4f46e5 !important; font-size: 1.5rem;">
             <i class="fas fa-shopping-bag me-2" style="color: #4f46e5;"></i>ShopMart
@@ -46,4 +46,33 @@
             </div>
         </div>
     </div>
+    <style>
+    .navbar {
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .navbar .nav-link {
+        color: #1f2937 !important;
+        font-weight: 500;
+    }
+
+    .navbar .nav-link:hover {
+        color: #4f46e5 !important;
+    }
+
+    .navbar .navbar-brand,
+    .navbar .navbar-brand i {
+        color: #4f46e5 !important;
+        opacity: 1 !important;
+    }
+
+    .navbar .navbar-toggler {
+        border-color: #4f46e5;
+    }
+
+    .navbar-toggler-icon {
+        filter: none !important;
+        opacity: 1 !important;
+    }
+</style>
 </nav>
