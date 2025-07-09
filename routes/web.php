@@ -24,4 +24,12 @@ Route::get('/cart', function () {
     return view('cart');
 })->name('cart');
 
+Route::get('/products', function () {
+    return view('dashboard.products.index');
+})->name('products');
+
+Route::get('/category-products', function () {
+    return view('dashboard.category_products.index');
+})->name('category-products');
+
 require __DIR__.'/auth.php';
