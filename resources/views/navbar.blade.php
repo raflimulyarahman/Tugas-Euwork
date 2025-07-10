@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
         <a class="navbar-brand fw-bold" href="#home" style="color: #4f46e5 !important; font-size: 1.5rem;">
             <i class="fas fa-shopping-bag me-2" style="color: #4f46e5;"></i>ShopMart
@@ -30,11 +30,7 @@
                 </nav>  
                 @if (Route::has('login'))
                 @auth
-                <a
-                    href="{{ url('/dashboard') }}"
-                    class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                    Dashboard
-                </a>
+                
                 @else
                 
 
