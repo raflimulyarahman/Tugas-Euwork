@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -381,14 +381,14 @@
         }
     </style>
 </head>
-<body>
+
     <div class="container-fluid">
         <div class="main-container">
             <div class="page-header">
                 <h1><i class="fas fa-cube me-3"></i>Manajemen Produk</h1>
                 <p class="mb-0">Kelola inventori produk dengan mudah dan efisien</p>
             </div>
-            
+
             <!-- Stats Cards -->
             <div class="row mb-3">
                 <div class="col-6 col-md-3">
@@ -416,7 +416,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Filter Section -->
             <div class="filter-section">
                 <div class="row g-2">
@@ -441,7 +441,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="table-container">
                 <div class="table-responsive">
                     <table class="table table-hover mb-0" id="productTable">
@@ -457,11 +457,23 @@
                             </tr>
                         </thead>
                         <tbody id="productTableBody">
+                            @foreach($products as $product)
+                            <tr>
+                                <td>{{ $product->id }}</td>
+                                <td>{{ $product->name }}</td>
+                                <td>{{ $product->description }}</td>
+                                <td>{{ $product->stock }}</td>
+                                <td>{{ $product->price }}</td>
+                                <td><img src="{{$product->image}}" width="50" height="50" alt="{{$product->name}}"></td>
+                               
+
+                            </tr>
+                            @endforeach
                             <!-- Data akan diisi oleh JavaScript -->
                         </tbody>
                     </table>
                 </div>
-                
+
                 <div class="empty-state d-none" id="emptyState">
                     <i class="fas fa-cube"></i>
                     <h5>Tidak ada produk ditemukan</h5>
@@ -542,52 +554,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
         // Data produk (simulasi database)
-        let products = [
-            { 
-                id: 1, 
-                name: 'Laptop Gaming ASUS ROG', 
+        let products = [{
+                id: 1,
+                name: 'Laptop Gaming ASUS ROG',
                 description: 'Laptop gaming dengan performa tinggi untuk gaming dan produktivitas',
-                stock: 25, 
+                stock: 25,
                 price: 15000000,
                 image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop'
             },
-            { 
-                id: 2, 
-                name: 'Smartphone Samsung Galaxy S23', 
+            {
+                id: 2,
+                name: 'Smartphone Samsung Galaxy S23',
                 description: 'Smartphone flagship dengan kamera canggih dan performa optimal',
-                stock: 45, 
+                stock: 45,
                 price: 12000000,
                 image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop'
             },
-            { 
-                id: 3, 
-                name: 'Headphone Sony WH-1000XM4', 
+            {
+                id: 3,
+                name: 'Headphone Sony WH-1000XM4',
                 description: 'Headphone wireless dengan noise cancelling terbaik di kelasnya',
-                stock: 8, 
+                stock: 8,
                 price: 4500000,
                 image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop'
             },
-            { 
-                id: 4, 
-                name: 'Tablet iPad Pro 11 inch', 
+            {
+                id: 4,
+                name: 'Tablet iPad Pro 11 inch',
                 description: 'Tablet premium untuk kreativitas dan produktivitas profesional',
-                stock: 15, 
+                stock: 15,
                 price: 13000000,
                 image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=300&fit=crop'
             },
-            { 
-                id: 5, 
-                name: 'Smartwatch Apple Watch Series 8', 
+            {
+                id: 5,
+                name: 'Smartwatch Apple Watch Series 8',
                 description: 'Smartwatch dengan fitur kesehatan dan fitness tracking lengkap',
-                stock: 30, 
+                stock: 30,
                 price: 6000000,
                 image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop'
             },
-            { 
-                id: 6, 
-                name: 'Kamera Mirrorless Canon EOS R5', 
+            {
+                id: 6,
+                name: 'Kamera Mirrorless Canon EOS R5',
                 description: 'Kamera professional untuk fotografi dan videografi berkualitas tinggi',
-                stock: 5, 
+                stock: 5,
                 price: 55000000,
                 image: 'https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=400&h=300&fit=crop'
             }
@@ -636,15 +647,15 @@
         function renderTable() {
             const tbody = document.getElementById('productTableBody');
             const emptyState = document.getElementById('emptyState');
-            
+
             if (filteredProducts.length === 0) {
                 tbody.innerHTML = '';
                 emptyState.classList.remove('d-none');
                 return;
             }
-            
+
             emptyState.classList.add('d-none');
-            
+
             tbody.innerHTML = filteredProducts.map(product => `
                 <tr>
                     <td><span class="badge badge-primary">${product.id}</span></td>
@@ -688,19 +699,19 @@
         function filterProducts() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const stockFilter = document.getElementById('stockFilter').value;
-            
+
             filteredProducts = products.filter(product => {
-                const matchesSearch = product.name.toLowerCase().includes(searchTerm) || 
-                                    product.description.toLowerCase().includes(searchTerm);
-                
+                const matchesSearch = product.name.toLowerCase().includes(searchTerm) ||
+                    product.description.toLowerCase().includes(searchTerm);
+
                 let matchesStock = true;
                 if (stockFilter === 'high') matchesStock = product.stock > 50;
                 if (stockFilter === 'medium') matchesStock = product.stock > 10 && product.stock <= 50;
                 if (stockFilter === 'low') matchesStock = product.stock <= 10;
-                
+
                 return matchesSearch && matchesStock;
             });
-            
+
             renderTable();
         }
 
@@ -712,7 +723,7 @@
         document.getElementById('productImage').addEventListener('input', function(e) {
             const preview = document.getElementById('imagePreview');
             const url = e.target.value;
-            
+
             if (url) {
                 preview.src = url;
                 preview.classList.remove('d-none');
@@ -731,37 +742,51 @@
             const stock = parseInt(document.getElementById('productStock').value);
             const price = parseInt(document.getElementById('productPrice').value);
             const image = document.getElementById('productImage').value || 'https://via.placeholder.com/400x300?text=No+Image';
-            
+
             if (!name || !description || stock < 0 || price < 0) {
                 alert('Mohon isi semua field dengan benar!');
                 return;
             }
-            
+
             if (editingId) {
                 // Update produk
                 const index = products.findIndex(p => p.id === editingId);
-                products[index] = { id: editingId, name, description, stock, price, image };
+                products[index] = {
+                    id: editingId,
+                    name,
+                    description,
+                    stock,
+                    price,
+                    image
+                };
                 editingId = null;
             } else {
                 // Tambah produk baru
                 const newId = Math.max(...products.map(p => p.id)) + 1;
-                products.push({ id: newId, name, description, stock, price, image });
+                products.push({
+                    id: newId,
+                    name,
+                    description,
+                    stock,
+                    price,
+                    image
+                });
             }
-            
+
             // Reset form
             document.getElementById('productForm').reset();
             document.getElementById('productId').value = '';
             document.getElementById('modalTitle').textContent = 'Tambah Produk Baru';
             document.getElementById('imagePreview').classList.add('d-none');
-            
+
             // Update display
             filterProducts();
             updateStats();
-            
+
             // Tutup modal
             const modal = bootstrap.Modal.getInstance(document.getElementById('addProductModal'));
             modal.hide();
-            
+
             showToast('Produk berhasil disimpan!', 'success');
         });
 
@@ -777,12 +802,12 @@
                 document.getElementById('productPrice').value = product.price;
                 document.getElementById('productImage').value = product.image;
                 document.getElementById('modalTitle').textContent = 'Edit Produk';
-                
+
                 // Show image preview
                 const preview = document.getElementById('imagePreview');
                 preview.src = product.image;
                 preview.classList.remove('d-none');
-                
+
                 const modal = new bootstrap.Modal(document.getElementById('addProductModal'));
                 modal.show();
             }
@@ -797,13 +822,13 @@
                     products = products.filter(p => p.id !== id);
                     filterProducts();
                     updateStats();
-                    
+
                     const modal = bootstrap.Modal.getInstance(document.getElementById('deleteModal'));
                     modal.hide();
-                    
+
                     showToast('Produk berhasil dihapus!', 'success');
                 };
-                
+
                 const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
                 modal.show();
             }
@@ -818,9 +843,9 @@
                 <i class="fas fa-check-circle me-2"></i>
                 ${message}
             `;
-            
+
             document.body.appendChild(toast);
-            
+
             setTimeout(() => {
                 toast.remove();
             }, 3000);
@@ -839,7 +864,6 @@
         renderTable();
         updateStats();
     </script>
-</body>
-</html>
+
 
 </x-app-layout>
