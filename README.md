@@ -1,10 +1,9 @@
 <div align="center">
   <a href="#">
-    <img src="https-raw-githubusercontent-com-raflimulyarahman-ecommerce--shopmart-main-public-logo-png" alt="Shopmart Logo" width="120px" />
-  </a>
+    </a>
   <h1 align="center">Shopmart E-Commerce</h1>
   <p align="center">
-    Platform E-Commerce modern yang dibangun dengan Next.js, Prisma, dan Tailwind CSS. <br />Menyediakan pengalaman belanja yang cepat, aman, dan intuitif.
+    Platform E-Commerce yang dibangun dengan framework PHP powerful, Laravel. <br /> Dirancang untuk memberikan pengalaman belanja yang mudah, cepat, dan aman.
     <br />
     <br />
     <a href="https://github.com/raflimulyarahman/ecommerce--shopmart/issues">Laporkan Bug</a>
@@ -14,14 +13,14 @@
 </div>
 
 <div align="center">
-  <img src="https://img.shields.io/github/stars/raflimulyarahman/ecommerce--shopmart?style=for-the-badge" alt="GitHub Stars">
-  <img src="https://img.shields.io/github/forks/raflimulyarahman/ecommerce--shopmart?style=for-the-badge" alt="GitHub Forks">
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
   <img src="https://img.shields.io/github/last-commit/raflimulyarahman/ecommerce--shopmart?style=for-the-badge" alt="Last Commit">
   <img src="https://img.shields.io/github/license/raflimulyarahman/ecommerce--shopmart?style=for-the-badge" alt="License">
 </div>
 <br/>
 
-> **Catatan Penting:** Ganti gambar di bawah ini dengan screenshot atau GIF demo dari aplikasi Shopmart Anda! Ini akan membuat repository Anda jauh lebih menarik. Anda bisa menggunakan aplikasi seperti **ScreenToGif** atau **LiceCap** untuk merekam layar.
+> **Saran Penting:** Ganti gambar di bawah ini dengan screenshot aplikasi Shopmart Anda! Ini akan membuat repository Anda jauh lebih menarik. Anda bisa menggunakan aplikasi seperti **ShareX** atau **ScreenToGif**.
 
 <div align="center">
   <img src="https://placehold.co/800x450?text=Screenshot+Aplikasi+Shopmart+Anda" alt="Project Screenshot">
@@ -31,21 +30,21 @@
 
 ## 🛍️ Tentang Proyek
 
-**Shopmart** adalah sebuah platform belanja online yang dirancang untuk memberikan pengalaman berbelanja yang mudah, cepat, dan aman. Dengan antarmuka yang modern dan responsif, Shopmart memudahkan pengguna untuk menemukan, memilih, dan membeli produk yang mereka inginkan, lengkap dengan sistem autentikasi dan proses pembayaran yang aman.
+**Shopmart** adalah sebuah platform belanja online yang dirancang untuk memberikan pengalaman berbelanja yang mudah, cepat, dan aman. Dengan memanfaatkan kekuatan framework **Laravel**, Shopmart menyediakan fitur-fitur e-commerce esensial dalam sebuah paket yang solid dan mudah dikembangkan.
 
-Proyek ini dibangun sebagai portofolio untuk mendemonstrasikan implementasi arsitektur web modern full-stack menggunakan Next.js.
+Proyek ini dibangun untuk mendemonstrasikan keahlian dalam pengembangan web backend menggunakan ekosistem PHP dan Laravel.
 
 ---
 
 ## ✨ Fitur Utama
 
--   **🔐 Autentikasi Pengguna**: Sistem login dan registrasi yang aman menggunakan NextAuth.
--   **🎨 Antarmuka Modern & Responsif**: Dibuat dengan Tailwind CSS untuk tampilan yang sempurna di semua perangkat.
--   **🛍️ Katalog Produk**: Tampilan produk yang dinamis dengan fitur pencarian dan filter.
--   **🛒 Keranjang Belanja**: Pengguna dapat menambah, mengubah jumlah, dan menghapus produk dari keranjang.
--   **💳 Proses Checkout**: Integrasi dengan payment gateway (contoh: Stripe/Midtrans) untuk pembayaran.
--   **🗃️ Database & ORM**: Manajemen data yang efisien menggunakan PostgreSQL dengan Prisma ORM.
--   **📜 Riwayat Pesanan**: Pengguna dapat melihat riwayat transaksi yang pernah dilakukan.
+-   **🔐 Autentikasi Bawaan Laravel**: Sistem login dan registrasi yang aman dan teruji.
+-   **🎨 Template Engine Blade**: Tampilan antarmuka yang dinamis dan mudah dikelola.
+-   **🛍️ Manajemen Produk**: Operasi CRUD (Create, Read, Update, Delete) untuk produk.
+-   **🛒 Sistem Keranjang Belanja**: Fungsionalitas keranjang belanja berbasis session atau database.
+-   **💳 Proses Checkout**: Alur untuk menyelesaikan pesanan dan memproses pembayaran.
+-   **🗃️ Migrasi & Seeder Database**: Manajemen skema database yang terstruktur dengan Eloquent ORM.
+-   **📜 Riwayat Pesanan**: Pengguna dapat melihat riwayat transaksi mereka.
 
 ---
 
@@ -53,21 +52,28 @@ Proyek ini dibangun sebagai portofolio untuk mendemonstrasikan implementasi arsi
 
 Berikut adalah teknologi utama yang menjadi fondasi dari proyek Shopmart:
 
-| Teknologi                                                                                                 | Deskripsi                                 |
-| --------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js" alt="Next.js">          | Framework React untuk Full-Stack Web      |
-| <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"> | Library JavaScript untuk membangun UI     |
-| <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"> | Framework CSS Utility-First               |
-| <img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma"> | ORM (Object-Relational Mapping) untuk Node.js & TypeScript |
-| <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"> | Database Relasional                     |
-| <img src="https://img.shields.io/badge/NextAuth.js-000000?style=for-the-badge&logo=next-auth&logoColor=white" alt="NextAuth.js"> | Solusi Autentikasi untuk Next.js          |
-| <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"> | Superset JavaScript yang menambahkan tipe statis |
+| Teknologi                                                                                                             | Deskripsi                                 |
+| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">              | Bahasa Pemrograman Server-Side            |
+| <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">    | Framework PHP untuk Pengembangan Web      |
+| <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">          | Sistem Manajemen Database Relasional      |
+| <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"> | Framework CSS untuk Desain Responsif      |
+| <img src="https://img.shields.io/badge/Blade-Laravel-FF2D20?style=for-the-badge" alt="Blade">                             | Template Engine Bawaan Laravel            |
+| <img src="https://img.shields.io/badge/Composer-885610?style=for-the-badge&logo=composer&logoColor=white" alt="Composer"> | Manajer Dependensi untuk PHP              |
 
 ---
 
 ## ⚙️ Instalasi & Konfigurasi Lokal
 
-Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal Anda.
+### Prasyarat
+
+Pastikan lingkungan pengembangan lokal Anda sudah terpasang:
+* **PHP** (sesuai versi yang dibutuhkan di `composer.json`)
+* **Composer**
+* **Database Server** (contoh: MySQL, MariaDB)
+* **Web Server** (contoh: Apache dari XAMPP, atau gunakan server bawaan Laravel)
+
+### Langkah-langkah Instalasi
 
 1.  **Clone Repository**
     ```bash
@@ -75,41 +81,39 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal A
     cd ecommerce--shopmart
     ```
 
-2.  **Install Dependencies**
-    Disarankan menggunakan `pnpm` untuk efisiensi, namun `npm` atau `yarn` juga bisa digunakan.
+2.  **Install Dependensi Composer**
+    Perintah ini akan mengunduh semua library PHP yang dibutuhkan proyek.
     ```bash
-    pnpm install
-    # atau
-    npm install
+    composer install
     ```
 
-3.  **Konfigurasi Database & Lingkungan**
+3.  **Konfigurasi Lingkungan**
     -   Salin file `.env.example` menjadi `.env`.
         ```bash
         cp .env.example .env
         ```
-    -   Buka file `.env` dan isi variabel yang diperlukan, terutama `DATABASE_URL`. Pastikan Anda memiliki server PostgreSQL yang sedang berjalan.
-        ```env
-        DATABASE_URL="postgresql://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME"
-        NEXTAUTH_SECRET="your-super-secret-key"
-        NEXTAUTH_URL="http://localhost:3000"
-        # Tambahkan variabel lain seperti kunci API untuk payment gateway jika ada
+    -   Buat kunci aplikasi baru.
+        ```bash
+        php artisan key:generate
         ```
+    -   Buka file `.env` dan sesuaikan konfigurasi database (`DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`, dll.) dengan pengaturan lokal Anda.
 
-4.  **Migrasi Database Prisma**
-    Perintah ini akan membuat tabel-tabel di database Anda sesuai dengan skema yang ada di `prisma/schema.prisma`.
+4.  **Migrasi Database**
+    Perintah ini akan membuat semua tabel yang diperlukan di database Anda. Pastikan database sudah dibuat di MySQL/MariaDB.
     ```bash
-    npx prisma migrate dev
+    php artisan migrate
+    ```
+    *(Opsional) Jika Anda memiliki seeder untuk mengisi data awal:*
+    ```bash
+    php artisan db:seed
     ```
 
-5.  **Jalankan Aplikasi**
+5.  **Jalankan Server Pengembangan**
     ```bash
-    pnpm run dev
-    # atau
-    npm run dev
+    php artisan serve
     ```
 
-6.  Buka browser dan akses <http://localhost:3000>.
+6.  Buka browser dan akses **http://127.0.0.1:8000**.
 
 ---
 
@@ -125,4 +129,4 @@ Proyek ini dilisensikan di bawah Lisensi MIT. Lihat file `LICENSE` untuk informa
 -   **GitHub**: [@raflimulyarahman](https://github.com/raflimulyarahman)
 -   **LinkedIn**: [Kunjungi Profil](https://www.linkedin.com/in/raflimulyarahman/)
 
-Dibuat dengan ❤️ oleh Rafli Mulya Rahman
+Dibuat dengan ❤️ menggunakan Laravel.
