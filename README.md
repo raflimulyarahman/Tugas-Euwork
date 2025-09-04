@@ -20,7 +20,6 @@
 </div>
 <br/>
 
-> **Saran Penting:** Ganti gambar di bawah ini dengan screenshot aplikasi Shopmart Anda! Ini akan membuat repository Anda jauh lebih menarik. Anda bisa menggunakan aplikasi seperti **ShareX** atau **ScreenToGif**.
 
 <div align="center">
   <img src="https://placehold.co/800x450?text=Screenshot+Aplikasi+Shopmart+Anda" alt="Project Screenshot">
